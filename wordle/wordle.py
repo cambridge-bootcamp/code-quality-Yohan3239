@@ -1,7 +1,7 @@
 # Wordle clone to add pytypes to
 import random
 
-def select_word(word_list_path):
+def select_word(word_list_path:str) -> None:
     """Selects a random 5-letter word from a file."""
     try:
         with open(word_list_path, 'r') as f:
@@ -15,7 +15,7 @@ def select_word(word_list_path):
         return "PYTHON"
 
 
-def check_guess(guess, secret_word):
+def check_guess(guess:str, secret_word:str):
     """
     Compares the guess against the secret word and returns the result.
     """
